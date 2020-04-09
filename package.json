@@ -1,6 +1,6 @@
 {
   "name": "xompass-loopback-component-explorer",
-  "version": "6.6.1",
+  "version": "6.6.2",
   "description": "Browse and test your LoopBack app's APIs",
   "engines": {
     "node": ">=8.9"

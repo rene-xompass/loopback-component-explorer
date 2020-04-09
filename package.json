@@ -23,7 +23,7 @@
   "author": "IBM Corp.",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/rene-xompass/loopback-component-explorer/issues"
+    "url": "https://github.com/xompass/loopback-component-explorer/issues"
   },
   "devDependencies": {
     "chai": "^3.2.0",

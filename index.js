@@ -16,7 +16,7 @@ const url = require('url');
 const path = require('path');
 const urlJoin = require('./lib/url-join');
 const _defaults = require('lodash').defaults;
-const createSwaggerObject = require('loopback-swagger').generateSwaggerSpec;
+const createSwaggerObject = require('xompass-loopback-swagger').generateSwaggerSpec;
 const SWAGGER_UI_ROOT = require('swagger-ui/index').dist;
 const STATIC_ROOT = path.join(__dirname, 'public');
 

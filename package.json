@@ -1,6 +1,6 @@
 {
-  "name": "loopback-component-explorer",
-  "version": "6.5.1",
+  "name": "xompass-loopback-component-explorer",
+  "version": "6.6.1",
   "description": "Browse and test your LoopBack app's APIs",
   "engines": {
     "node": ">=8.9"
@@ -23,7 +23,7 @@
   "author": "IBM Corp.",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-component-explorer/issues"
+    "url": "https://github.com/rene-xompass/loopback-component-explorer/issues"
   },
   "devDependencies": {
     "chai": "^3.2.0",
@@ -37,8 +37,8 @@
   "dependencies": {
     "debug": "^3.1.0",
     "lodash": "^4.17.11",
-    "loopback-swagger": "^5.0.0",
     "strong-globalize": "^4.1.1",
-    "swagger-ui": "^2.2.5"
+    "swagger-ui": "^2.2.5",
+    "xompass-loopback-swagger": "^5.9.1"
   }
 }

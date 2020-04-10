@@ -17,8 +17,11 @@ const path = require('path');
 const urlJoin = require('./lib/url-join');
 const _defaults = require('lodash').defaults;
 const createSwaggerObject = require('xompass-loopback-swagger').generateSwaggerSpec;
-const SWAGGER_UI_ROOT = require('swagger-ui/index').dist;
+const SWAGGER_UI_ROOT = require('swagger-ui-dist').absolutePath();
+
 const STATIC_ROOT = path.join(__dirname, 'public');
+const JQUERY_ROOT = path.join(__dirname, 'node_modules/jquery/dist');
+console.log(JQUERY_ROOT)
 
 module.exports = explorer;
 explorer.routes = routes;
@@ -48,7 +51,7 @@ function routes(loopbackApplication, options) {
     throw new Error(
       g.f(
         '{{xompass-loopback-component-explorer}} requires ' +
-          '{{loopback}} 2.0 or newer'
+        '{{loopback}} 2.0 or newer'
       )
     );
   }
@@ -56,7 +59,7 @@ function routes(loopbackApplication, options) {
   options = _defaults({}, options, {
     resourcePath: 'swagger.json',
     apiInfo: loopbackApplication.get('apiInfo') || {},
-    swaggerUI: true,
+    swaggerUI: true
   });
 
   const router = new loopback.Router();
@@ -65,7 +68,7 @@ function routes(loopbackApplication, options) {
 
   // config.json is loaded by swagger-ui. The server should respond
   // with the relative URI of the resource doc.
-  router.get('/config.json', function(req, res) {
+  router.get('/config.json', function (req, res) {
     // Get the path we're mounted at. It's best to get this from the referer
     // in case we're proxied at a deep path.
     let source = url.parse(req.headers.referer || '').pathname;
@@ -79,7 +82,7 @@ function routes(loopbackApplication, options) {
     }
     res.send({
       url: urlJoin(source, '/' + options.resourcePath),
-      auth: options.auth,
+      auth: options.auth
     });
   });
 
@@ -92,7 +95,7 @@ function routes(loopbackApplication, options) {
       if (typeof options.uiDirs === 'string') {
         router.use(loopback.static(options.uiDirs));
       } else if (Array.isArray(options.uiDirs)) {
-        options.uiDirs.forEach(function(dir) {
+        options.uiDirs.forEach(function (dir) {
           router.use(loopback.static(dir));
         });
       }
@@ -103,6 +106,9 @@ function routes(loopbackApplication, options) {
 
     // Swagger UI distribution
     router.use(loopback.static(SWAGGER_UI_ROOT));
+
+    // Jquery
+    router.use(loopback.static(JQUERY_ROOT));
   }
 
   return router;

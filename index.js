@@ -20,8 +20,6 @@ const createSwaggerObject = require('xompass-loopback-swagger').generateSwaggerS
 const SWAGGER_UI_ROOT = require('swagger-ui-dist').absolutePath();
 
 const STATIC_ROOT = path.join(__dirname, 'public');
-const JQUERY_ROOT = path.join(__dirname, 'node_modules/jquery/dist');
-console.log(JQUERY_ROOT)
 
 module.exports = explorer;
 explorer.routes = routes;
@@ -106,9 +104,6 @@ function routes(loopbackApplication, options) {
 
     // Swagger UI distribution
     router.use(loopback.static(SWAGGER_UI_ROOT));
-
-    // Jquery
-    router.use(loopback.static(JQUERY_ROOT));
   }
 
   return router;

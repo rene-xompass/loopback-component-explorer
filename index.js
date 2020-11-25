@@ -1,5 +1,5 @@
 // Copyright IBM Corp. 2013,2019. All Rights Reserved.
-// Node module: xompass-loopback-component-explorer
+// Node module: @xompass/component-explorer
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
@@ -16,7 +16,7 @@ const url = require('url');
 const path = require('path');
 const urlJoin = require('./lib/url-join');
 const _defaults = require('lodash.defaults');
-const createSwaggerObject = require('xompass-loopback-swagger').generateSwaggerSpec;
+const createSwaggerObject = require('@xompass/loopback-swagger').generateSwaggerSpec;
 const SWAGGER_UI_ROOT = require('swagger-ui-dist').absolutePath();
 
 const STATIC_ROOT = path.join(__dirname, 'public');
@@ -27,7 +27,7 @@ explorer.routes = routes;
 /**
  * Example usage:
  *
- * var explorer = require('xompass-loopback-component-explorer');
+ * var explorer = require('@xompass/component-explorer');
  * explorer(app, options);
  */
 
@@ -37,7 +37,7 @@ function explorer(loopbackApplication, options) {
     options.mountPath,
     routes(loopbackApplication, options)
   );
-  loopbackApplication.set('xompass-loopback-component-explorer', options);
+  loopbackApplication.set('@xompass/component-explorer', options);
 }
 
 function routes(loopbackApplication, options) {
@@ -48,7 +48,7 @@ function routes(loopbackApplication, options) {
   if (loopbackMajor < 2) {
     throw new Error(
       g.f(
-        '{{xompass-loopback-component-explorer}} requires ' +
+        '{{@xompass/component-explorer}} requires ' +
         '{{loopback}} 2.0 or newer'
       )
     );

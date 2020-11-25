@@ -1,6 +1,6 @@
 {
-  "name": "xompass-loopback-component-explorer",
-  "version": "7.6.4",
+  "name": "@xompass/component-explorer",
+  "version": "7.7.0",
   "description": "Browse and test your LoopBack app's APIs",
   "engines": {
     "node": ">=8.9"
@@ -35,10 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@xompass/loopback-swagger": "^6.10.5",
     "debug": "^3.1.0",
     "lodash.defaults": "^4.2.0",
     "strong-globalize": "^4.1.1",
-    "swagger-ui-dist": "^3.25.0",
-    "xompass-loopback-swagger": "^6.10.2"
+    "swagger-ui-dist": "^3.37.0"
   }
 }

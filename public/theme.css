@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+}
+
+.swagger-ui .topbar {
+    background: #2E363F;
+    padding: 15px 0;
+}
+
+.swagger-ui .info {
+    margin: 30px 0;
+}
+
+.swagger-ui .info .title {
+    font-size: 30px;
+}
+
+.swagger-ui .info .title small {
+    border-radius: 3px;
+}
+
+.swagger-ui .info .title small pre {
+    font-size: 10px;
+}
+
+.swagger-ui .scheme-container {
+    padding: 15px 0;
+}
+
+.swagger-ui .scheme-container .servers, .swagger-ui .scheme-container .servers-title {
+    display: none;
+}
+
+.swagger-ui .auth-wrapper .authorize {
+    padding: 3px 20px;
+}
+
+.swagger-ui .opblock-tag {
+    font-size: 18px;
+    padding: 8px 20px 8px 8px;
+}
+
+.swagger-ui .opblock {
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.swagger-ui .opblock .opblock-summary {
+    padding: 0;
+}
+
+.swagger-ui .opblock .opblock-summary-method {
+    border-radius: 0;
+    padding: 8px 15px;
+}
+
+.swagger-ui .opblock .opblock-summary-path {
+    font-size: 14px;
+}
+
+.swagger-ui .opblock .opblock-summary-description {
+    font-size: 12px;
+    text-align: right;
+}
+
+.swagger-ui section.models .model-container {
+    border-radius: 0;
+}
+
+.swagger-ui section.models .model-container > .model-box {
+    padding: 0;
+}

@@ -22,7 +22,7 @@
           SwaggerUIBundle.plugins.DownloadUrl
         ],
         docExpansion: 'none',
-        layout: 'StandaloneLayout',
+        layout: 'BaseLayout',
         requestInterceptor: function (request) {
           const authorization = request.headers.authorization;
           const accessToken = getParameterByName('access_token', request.url);

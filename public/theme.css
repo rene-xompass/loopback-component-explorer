@@ -77,10 +77,61 @@ body {
     text-align: right;
 }
 
+.swagger-ui .parameter__name.required:after {
+    display: none;
+}
+
+.swagger-ui .parameter__type,
+.swagger-ui .parameter__deprecated,
+.swagger-ui .parameter__in {
+    font-size: 11px;
+    padding-bottom: 0;
+}
+
+.swagger-ui table tbody tr td.parameters-col_name {
+    min-width: 9em;
+}
+
+.swagger-ui table tbody tr td.parameters-col_description .renderedMarkdown p {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.swagger-ui table tbody tr td.parameters-col_description input {
+    margin-top: 0;
+}
+
+.swagger-ui table tbody tr td.parameters-col_description .renderedMarkdown.parameter__enum,
+.swagger-ui table tbody tr td.parameters-col_description .renderedMarkdown.parameter__default {
+    font-size: 13px;
+    color: gray;
+}
+
 .swagger-ui section.models .model-container {
     border-radius: 0;
 }
 
 .swagger-ui section.models .model-container > .model-box {
     padding: 0;
+}
+
+.swagger-ui input[type=email],
+.swagger-ui input[type=file],
+.swagger-ui input[type=password],
+.swagger-ui input[type=search],
+.swagger-ui input[type=text] {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.swagger-ui textarea {
+    padding: 5px 10px;
+}
+
+.swagger-ui .execute-wrapper {
+    padding: 0 20px;
+}
+
+.swagger-ui .responses-wrapper {
+    margin-top: 20px;
 }
